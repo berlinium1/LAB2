@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
-float A1, A2, B1, B2, C1, C2, A, B, C
-main(){
+float A1, A2, B1, B2, C1, C2, A, B, C;
+int main(){
+    //послідовне введення коефіцієнтів при змінних системи рівнянь
     cout << "Enter A1: \n";
     cin >> A1;
     cout << "Enter B1: \n";
@@ -14,18 +15,17 @@ main(){
     cin >> B2;
     cout << "Enter C2: \n";
     cin >> C2;
+    //для простоти розуміння введемо буферні змінні для порівння коефіцієнтів
     A = A1/A2;
     B = B1/B2;
     C = C1/C2;
-    if (A != B) 
-        cout << "The equation has one solution\n";
+    if (A != B) //умова, коли рівняння має лише один розв'язок
+        cout << "Система має лише один розв'язок\n";
     else
     {
-        if (A == B != C)
-            cout << "The equation has no solution\n"
+        if (A != C)//умова, коли рівняння не має розв'язків або має безліч розв'язків
+            cout << "Система не має розв'язків\n";
         
-        else cout << "The equation has many solutions\n";
+        else cout << "Система має безліч розв'язків\n";
     }
-    
-
 }
